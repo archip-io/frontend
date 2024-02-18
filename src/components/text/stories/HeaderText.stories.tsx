@@ -1,19 +1,23 @@
 import { Variant } from '../../../styles/ts/types.ts'
 import { HeaderText as Header } from '../Text.tsx'
-import { TextConfig } from '../Text.types.ts'
+import { TextAlign, TextConfig } from '../Text.types.ts'
 
 export default {
-    argTypes: {
-        variant: {
-            control: 'inline-radio',
-            options: [Variant.PRIMARY, Variant.SECONDARY],
-        },
+  argTypes: {
+    align: {
+      control: 'inline-radio',
+      options: Object.values(TextAlign),
     },
-    component: Header,
-    parameters: {
-        layout: 'centered',
+    variant: {
+      control: 'inline-radio',
+      options: [Variant.PRIMARY, Variant.SECONDARY],
     },
-    title: 'Components/Text',
+  },
+  component: Header,
+  parameters: {
+    layout: 'centered',
+  },
+  title: 'Components/Text',
 }
 
 const Template = (config: TextConfig) => <Header config={config} />
@@ -21,9 +25,10 @@ const Template = (config: TextConfig) => <Header config={config} />
 export const HeaderText = Template.bind({})
 // @ts-ignore
 HeaderText.args = {
-    bold: false,
-    size: 40,
-    text: 'Header text',
-    underlined: false,
-    variant: Variant.PRIMARY,
+  align: TextAlign.CENTER,
+  bold: false,
+  size: 40,
+  text: 'Header text',
+  underlined: false,
+  variant: Variant.PRIMARY,
 }
