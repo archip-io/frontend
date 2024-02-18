@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { Variant } from '../../../styles/ts/types.ts'
-import { Input } from '../Input.tsx'
-import { InputConfig, InputType } from '../Input.type.ts'
+import { InputWithLabelAndError } from '../Input.tsx'
+import { InputType, InputWithLabelAndErrorConfig } from '../Input.type.ts'
 
 export default {
     argTypes: {
@@ -12,17 +12,17 @@ export default {
         },
         variant: {
             control: 'inline-radio',
-            options: [Variant.PRIMARY],
+            options: [Variant.PRIMARY, Variant.SECONDARY],
         },
     },
-    component: Input,
+    component: InputWithLabelAndError,
     parameters: {
         layout: 'centered',
     },
     title: 'Components/Input',
 }
 
-const Template = (config: InputConfig) => {
+const Template = (config: InputWithLabelAndErrorConfig) => {
     const [value, setValue] = useState(config.value || '')
     if (config.onChange === undefined) {
         config.onChange = (event) => setValue(event.target.value)
@@ -30,7 +30,8 @@ const Template = (config: InputConfig) => {
 
     return (
         <>
-            <Input config={config} />
+            <InputWithLabelAndError config={config} />
+            <br />
             <p>
                 <b>Value:</b> {value}
             </p>
@@ -38,11 +39,15 @@ const Template = (config: InputConfig) => {
     )
 }
 
-export const Default = Template.bind({})
+export const WithLabelAndError = Template.bind({})
 // @ts-ignore
-Default.args = {
-    inputSize: 18,
-    name: 'input',
+WithLabelAndError.args = {
+    error: 'Error',
+    errorSize: 14,
+    inputSize: 24,
+    label: 'Label:',
+    labelSize: 18,
+    name: 'InputWithLabelAndError',
     onChange: undefined,
     type: InputType.TEXT,
     value: undefined,

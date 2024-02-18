@@ -1,5 +1,5 @@
 NPM = npm
-BUILD_DIR = ./dist ./build_keycloak
+BUILD_DIR = ./build ./dist ./build_keycloak ./dist_keycloak
 
 .PHONY: clean
 clean:
@@ -26,7 +26,7 @@ storybook:
 	$(NPM) run storybook
 
 .PHONY: build-storybook
-storybook:
+build-storybook:
 	$(NPM) run build-storybook
 
 .PHONY: help
