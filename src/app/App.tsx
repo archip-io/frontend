@@ -1,34 +1,13 @@
-import { Button } from "../components/button/Button.tsx";
-import { HeaderText, PlainText } from "../components/text/Text.tsx";
+import styled from "styled-components";
+
+import { Color } from "../styles/ts/colors.ts";
 import "./App.css";
 
+export const HeaderContainer = styled.div`
+  box-sizing: border-box;
+  height: 60px;
+  background-color: ${Color.BACKGROUND_EXTRA};
+`;
 export default function App() {
-  return (
-    <>
-      <p>
-        <HeaderText
-          config={{
-            size: 40,
-            text: "Hello",
-          }}
-        />
-      </p>
-      <p>
-        <PlainText
-          config={{
-            size: 20,
-            text: "How are you?",
-          }}
-        />
-      </p>
-      <p>
-        <Button
-          config={{
-            size: 20,
-            text: "Click",
-          }}
-        />
-      </p>
-    </>
-  );
+  return <HeaderContainer />;
 }
