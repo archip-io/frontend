@@ -1,29 +1,29 @@
-import { Variant } from "../../../styles/ts/types.ts";
-import { HeaderText } from "../Text.tsx";
-import { TextConfig } from "../Text.types.ts";
+import { Variant } from '../../../styles/ts/types.ts'
+import { HeaderText as Header } from '../Text.tsx'
+import { TextConfig } from '../Text.types.ts'
 
 export default {
-  argTypes: {
-    variant: {
-      control: "inline-radio",
-      options: [Variant.PRIMARY, Variant.SECONDARY],
+    argTypes: {
+        variant: {
+            control: 'inline-radio',
+            options: [Variant.PRIMARY, Variant.SECONDARY],
+        },
     },
-  },
-  component: HeaderText,
-  parameters: {
-    layout: "centered",
-  },
-  title: "Components/HeaderText",
-};
+    component: Header,
+    parameters: {
+        layout: 'centered',
+    },
+    title: 'Components/Text',
+}
 
-const Template = (config: TextConfig) => <HeaderText config={config} />;
+const Template = (config: TextConfig) => <Header config={config} />
 
-export const Default = Template.bind({});
+export const HeaderText = Template.bind({})
 // @ts-ignore
-Default.args = {
-  bold: false,
-  size: 40,
-  text: "Header text",
-  underlined: false,
-  variant: Variant.PRIMARY,
-};
+HeaderText.args = {
+    bold: false,
+    size: 40,
+    text: 'Header text',
+    underlined: false,
+    variant: Variant.PRIMARY,
+}

@@ -1,51 +1,46 @@
-import { Variant } from "../../styles/ts/types.ts";
+import React from 'react'
+
+import { Variant } from '../../styles/ts/types.ts'
 
 export enum InputType {
-  PASSWORD = "password",
-  TEXT = "text",
+    PASSWORD = 'password',
+    TEXT = 'text',
 }
 
 export type InputUIConfig = {
-  size: number;
-  variant?: Variant;
-};
-
-export type InputConfig = {
-  name?: string;
-  onChange?: any;
-  size: number;
-  type: InputType;
-  value?: string;
-  variant?: Variant;
-};
-
-export type InputWithLabelConfig = {
-  label: string;
-  labelSize: number;
-  name?: string;
-  onChange?: any;
-  size: number;
-  type: InputType;
-  value?: string;
-  variant?: Variant;
-};
-
-export function toInputUIConfig(
-  config: InputConfig | InputWithLabelConfig,
-): InputUIConfig {
-  return {
-    size: config.size,
-    variant: config.variant,
-  };
+    inputSize: number
+    variant?: Variant
 }
 
-export function toInputConfig(config: InputWithLabelConfig): InputConfig {
-  return {
-    name: config.name,
-    onChange: config.onChange,
-    size: config.size,
-    type: config.type,
-    value: config.value,
-    variant: config.variant,
-  };
+export type InputConfig = {
+    inputSize: number
+    name?: string
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
+    type?: InputType
+    value?: string
+    variant?: Variant
+}
+
+export type InputWithLabelConfig = {
+    inputSize: number
+    label: string
+    labelSize: number
+    name?: string
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
+    type?: InputType
+    value?: string
+    variant?: Variant
+}
+
+export type InputWithLabelAndErrorConfig = {
+    error: string
+    errorSize: number
+    inputSize: number
+    label: string
+    labelSize: number
+    name?: string
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
+    type?: InputType
+    value?: string
+    variant?: Variant
 }

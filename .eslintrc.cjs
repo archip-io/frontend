@@ -8,6 +8,7 @@ module.exports = {
         "plugin:sonarjs/recommended",
         "plugin:unicorn/recommended",
         "plugin:perfectionist/recommended-natural",
+        "plugin:storybook/recommended"
     ],
     ignorePatterns: ["dist", "build_keycloak", "node_modules", "dist_keycloak"],
     parser: "@typescript-eslint/parser",
