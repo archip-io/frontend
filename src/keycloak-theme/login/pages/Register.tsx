@@ -10,8 +10,8 @@ import { Button } from '../../../components/button/Button.tsx'
 import { HeaderText, PlainText } from '../../../components/text/Text.tsx'
 import { Variant } from '../../../styles/ts/types.ts'
 import { manageElementJustifyContent } from '../utils/Utils.ts'
-import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './Login.styled.ts'
-import { UserProfileFormFields } from './UserProfileForm.tsx'
+import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './shared/Login.styled.ts'
+import { UserProfileFormFields } from './shared/UserProfileForm.tsx'
 
 export default function Register(props: PageProps<Extract<KcContext, { pageId: 'register-user-profile.ftl' }>, I18n>) {
   const { i18n, kcContext } = props

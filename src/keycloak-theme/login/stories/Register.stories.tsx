@@ -11,7 +11,7 @@ const registerMeta: Meta<typeof PageStory> = {
   parameters: {
     layout: 'fullscreen',
   },
-  title: 'Pages/Register',
+  title: 'Pages/Keycloak/Register',
 }
 
 export default registerMeta

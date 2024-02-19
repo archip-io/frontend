@@ -14,27 +14,20 @@ export const Container = styled.div`
   overflow: auto;
 `
 
-export const Content = styled.div`
+export const Form = styled.form`
   display: flex;
   height: 100%;
-  width: 50%;
+  width: 30%;
   min-width: 500px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   overflow: auto;
 `
 
 export const Logo = styled.img`
   width: 30%;
   object-fit: cover;
-`
-
-export const DivLine = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
+  border-radius: 50%;
 `

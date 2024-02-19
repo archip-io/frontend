@@ -19,7 +19,7 @@ export function getRoutes(): RouteType[] {
       accessRoles: getAllRoles(),
       children: [],
       element: <NotFoundPage />,
-      isProtected: true,
+      isProtected: false,
       path: '/',
     },
 

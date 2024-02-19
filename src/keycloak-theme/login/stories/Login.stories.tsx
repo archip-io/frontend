@@ -11,7 +11,7 @@ const loginMeta: Meta<typeof PageStory> = {
   parameters: {
     layout: 'fullscreen',
   },
-  title: 'Pages/Login',
+  title: 'Pages/Keycloak/Login',
 }
 
 export default loginMeta

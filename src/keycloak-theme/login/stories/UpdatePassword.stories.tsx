@@ -11,7 +11,7 @@ const updatePasswordMeta: Meta<typeof PageStory> = {
   parameters: {
     layout: 'fullscreen',
   },
-  title: 'Pages/UpdatePassword',
+  title: 'Pages/Keycloak/UpdatePassword',
 }
 
 export default updatePasswordMeta

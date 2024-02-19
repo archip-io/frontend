@@ -11,7 +11,7 @@ const verifyEmailMeta: Meta<typeof PageStory> = {
   parameters: {
     layout: 'fullscreen',
   },
-  title: 'Pages/VerifyEmail',
+  title: 'Pages/Keycloak/VerifyEmail',
 }
 
 export default verifyEmailMeta
