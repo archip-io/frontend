@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import backSVG from "../assets/back-icon.svg";
-import circle from "../assets/circle.png";
-import { HeaderText, PlainText } from "../components/text/Text.tsx";
-import { Variant } from "../styles/ts/types.ts";
+import backSVG from '../assets/back-icon.svg'
+import circle from '../assets/circle.png'
+import { HeaderText, PlainText } from '../components/text/Text.tsx'
+import { Variant } from '../styles/ts/types.ts'
 
 export const PageContainer = styled.div`
   box-sizing: border-box;
@@ -18,7 +18,7 @@ export const PageContainer = styled.div`
   padding-right: 40px;
   width: 100vw;
   height: calc(100vh - 60px);
-`;
+`
 
 export const Img = styled.img`
   height: 30px;
@@ -28,20 +28,20 @@ export const Img = styled.img`
     cursor: pointer;
     height: 35px;
   }
-`;
+`
 
 export const ImgBack = styled.img<{
-  height: number;
-  width: number;
-  left: number;
-  top: number;
+  height: number
+  left: number
+  top: number
+  width: number
 }>`
   position: absolute;
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
   margin-left: ${(props) => props.left}px;
   margin-top: ${(props) => props.top}px;
-`;
+`
 
 export const BackContainer = styled.div`
   box-sizing: border-box;
@@ -50,32 +50,32 @@ export const BackContainer = styled.div`
   display: flex;
   gap: 10px;
   flex-direction: row-reverse;
-`;
+`
 
 export function NotFoundPage() {
   return (
     <PageContainer>
-      <ImgBack src={circle} height={60} width={60} left={30} top={168} />
-      <ImgBack src={circle} height={134} width={134} left={1124} top={88} />
-      <ImgBack src={circle} height={207} width={207} left={1031} top={537} />
+      <ImgBack height={60} left={30} src={circle} top={168} width={60} />
+      <ImgBack height={134} left={1124} src={circle} top={88} width={134} />
+      <ImgBack height={207} left={1031} src={circle} top={537} width={207} />
       <HeaderText
         config={{
           size: 600,
-          text: "404",
+          text: '404',
           variant: Variant.PRIMARY,
         }}
       />
       <PlainText
         config={{
           size: 64,
-          text: "Страница не найдена",
+          text: 'Страница не найдена',
           variant: Variant.PRIMARY,
         }}
       />
       <PlainText
         config={{
           size: 32,
-          text: "Страница, которую вы ищете, не существует :(",
+          text: 'Страница, которую вы ищете, не существует :(',
           variant: Variant.PRIMARY,
         }}
       />
@@ -84,11 +84,11 @@ export function NotFoundPage() {
         <PlainText
           config={{
             size: 32,
-            text: "вернуться на главную страницу",
+            text: 'вернуться на главную страницу',
             variant: Variant.PRIMARY,
           }}
         />
       </BackContainer>
     </PageContainer>
-  );
+  )
 }

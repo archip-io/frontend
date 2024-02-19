@@ -3,15 +3,15 @@ import { Meta, StoryObj } from '@storybook/react'
 import { createPageStory } from './createPageStory.tsx'
 
 const { PageStory } = createPageStory({
-    pageId: 'register-user-profile.ftl',
+  pageId: 'register-user-profile.ftl',
 })
 
 const registerMeta: Meta<typeof PageStory> = {
-    component: PageStory,
-    parameters: {
-        layout: 'fullscreen',
-    },
-    title: 'Pages/Register',
+  component: PageStory,
+  parameters: {
+    layout: 'fullscreen',
+  },
+  title: 'Pages/Register',
 }
 
 export default registerMeta

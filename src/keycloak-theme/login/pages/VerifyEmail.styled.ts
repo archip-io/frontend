@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const GridContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,37 +14,26 @@ export const GridContainer = styled.div`
   overflow: auto;
 `
 
-export const LogoItem = styled.div`
+export const Content = styled.div`
   display: flex;
   height: 100%;
-  width: 100%;
-  max-width: fit-content;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-`
-
-export const ContentItem = styled.form`
-  display: flex;
-  height: 100%;
-  width: 100%;
+  width: 50%;
+  min-width: 500px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   overflow: auto;
 `
 
 export const Logo = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+  width: 30%;
   object-fit: cover;
 `
 
 export const DivLine = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: fit-content;
