@@ -11,7 +11,7 @@ const resetPasswordMeta: Meta<typeof PageStory> = {
   parameters: {
     layout: 'fullscreen',
   },
-  title: 'Pages/ResetPassword',
+  title: 'Pages/Keycloak/ResetPassword',
 }
 
 export default resetPasswordMeta

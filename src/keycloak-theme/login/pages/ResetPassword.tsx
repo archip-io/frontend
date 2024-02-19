@@ -13,7 +13,7 @@ import { PlainText } from '../../../components/text/Text.tsx'
 import { TextAlign } from '../../../components/text/Text.types.ts'
 import { Variant } from '../../../styles/ts/types.ts'
 import { manageElementJustifyContent } from '../utils/Utils.ts'
-import { Container, From, Logo } from './ResetPassword.styled.ts'
+import { Container, Form, Logo } from './shared/ResetPassword.styled.ts'
 
 export default function ResetPassword(
   props: PageProps<
@@ -49,7 +49,7 @@ export default function ResetPassword(
   return (
     <>
       <Container>
-        <From action={url.loginAction} id={'ContentItem'} method="POST">
+        <Form action={url.loginAction} id={'ContentItem'} method="POST">
           <Logo src={logo} />
           <PlainText
             config={{
@@ -80,7 +80,7 @@ export default function ResetPassword(
               variant: Variant.PRIMARY,
             }}
           />
-        </From>
+        </Form>
       </Container>
     </>
   )

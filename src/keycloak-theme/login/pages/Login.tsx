@@ -13,7 +13,7 @@ import { InputType } from '../../../components/input/Input.type.ts'
 import { HeaderText, PlainText } from '../../../components/text/Text.tsx'
 import { Variant } from '../../../styles/ts/types.ts'
 import { manageElementJustifyContent } from '../utils/Utils.ts'
-import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './Login.styled.ts'
+import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './shared/Login.styled.ts'
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: 'login.ftl' }>, I18n>) {
   const { i18n, kcContext } = props

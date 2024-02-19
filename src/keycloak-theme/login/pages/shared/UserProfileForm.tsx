@@ -1,11 +1,11 @@
 import { useFormValidation } from 'keycloakify/login/lib/useFormValidation'
 import { useEffect } from 'react'
 
-import type { I18n } from '../i18n.ts'
+import type { I18n } from '../../i18n.ts'
 
-import { InputWithLabelAndError } from '../../../components/input/Input.tsx'
-import { InputType } from '../../../components/input/Input.type.ts'
-import { Variant } from '../../../styles/ts/types.ts'
+import { InputWithLabelAndError } from '../../../../components/input/Input.tsx'
+import { InputType } from '../../../../components/input/Input.type.ts'
+import { Variant } from '../../../../styles/ts/types.ts'
 
 export type UserProfileFormFieldsProps = {
   i18n: I18n
