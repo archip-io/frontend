@@ -9,7 +9,7 @@ import logo from '../../../assets/logo.png'
 import { Button } from '../../../components/button/Button.tsx'
 import { HeaderText, PlainText } from '../../../components/text/Text.tsx'
 import { Variant } from '../../../styles/ts/types.ts'
-import { manageElementJustifyContent } from '../utils/Utils.ts'
+import { manageElementJustifyContent } from '../../../utils/Utils.ts'
 import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './shared/Login.styled.ts'
 import { UserProfileFormFields } from './shared/UserProfileForm.tsx'
 

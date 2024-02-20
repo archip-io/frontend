@@ -12,7 +12,7 @@ import { InputType } from '../../../components/input/Input.type.ts'
 import { PlainText } from '../../../components/text/Text.tsx'
 import { TextAlign } from '../../../components/text/Text.types.ts'
 import { Variant } from '../../../styles/ts/types.ts'
-import { manageElementJustifyContent } from '../utils/Utils.ts'
+import { manageElementJustifyContent } from '../../../utils/Utils.ts'
 import { Container, Form, Logo } from './shared/ResetPassword.styled.ts'
 
 export default function UpdatePassword(
