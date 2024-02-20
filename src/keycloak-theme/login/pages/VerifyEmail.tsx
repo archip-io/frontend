@@ -10,7 +10,7 @@ import letter from '../../../assets/letter.svg'
 import { HeaderText, PlainText } from '../../../components/text/Text.tsx'
 import { TextAlign } from '../../../components/text/Text.types.ts'
 import { Variant } from '../../../styles/ts/types.ts'
-import { manageElementJustifyContent } from '../utils/Utils.ts'
+import { manageElementJustifyContent } from '../../../utils/Utils.ts'
 
 const Container = styled.div`
   display: flex;

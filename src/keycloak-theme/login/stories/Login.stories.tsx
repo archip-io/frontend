@@ -19,10 +19,10 @@ export default loginMeta
 type LoginStory = StoryObj<typeof loginMeta>
 
 // @ts-ignore
-export const WithoutGmailProvider: LoginStory = () => <PageStory />
+export const WithoutSocialLogin: LoginStory = () => <PageStory />
 
 // @ts-ignore
-export const WithGmailProvider: LoginStory = () => (
+export const WithSocialLogin: LoginStory = () => (
   <PageStory
     kcContext={{
       social: {
@@ -30,8 +30,14 @@ export const WithGmailProvider: LoginStory = () => (
           {
             alias: 'google',
             displayName: 'Google',
-            loginUrl: 'google',
+            loginUrl: '#',
             providerId: 'google',
+          },
+          {
+            alias: 'yandex',
+            displayName: 'Yandex',
+            loginUrl: '#',
+            providerId: 'yandex',
           },
         ],
       },
