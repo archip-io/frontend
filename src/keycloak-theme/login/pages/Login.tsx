@@ -5,21 +5,21 @@ import { useEffect, useState } from 'react'
 import type { I18n } from '../i18n'
 import type { KcContext } from '../kcContext'
 
-import gmail from '../../../assets/gmail.svg'
+import google from '../../../assets/google.svg'
 import logo from '../../../assets/logo.png'
+import yandex from '../../../assets/yandex.svg'
 import { Button } from '../../../components/button/Button.tsx'
 import { InputWithLabel } from '../../../components/input/Input.tsx'
 import { InputType } from '../../../components/input/Input.type.ts'
 import { HeaderText, PlainText } from '../../../components/text/Text.tsx'
 import { Variant } from '../../../styles/ts/types.ts'
-import { manageElementJustifyContent } from '../utils/Utils.ts'
+import { manageElementJustifyContent } from '../../../utils/Utils.ts'
 import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './shared/Login.styled.ts'
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: 'login.ftl' }>, I18n>) {
   const { i18n, kcContext } = props
   const { msgStr } = i18n
   const { social, url } = kcContext
-  const googleProvider = social.providers?.filter((p) => p.providerId === 'google').at(0)
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
 
@@ -97,29 +97,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: 'log
               variant: Variant.PRIMARY,
             }}
           />
-          {googleProvider !== undefined && (
-            <>
-              <PlainText
-                config={{
-                  size: 16,
-                  text: msgStr('or'),
-                  variant: Variant.SECONDARY,
-                }}
-              />
-              <a href={googleProvider.loginUrl}>
-                <DivLine style={{ gap: '15px' }}>
-                  <img alt={'GMail'} height={'30px'} src={gmail} />
-                  <PlainText
-                    config={{
-                      size: 16,
-                      text: msgStr('gmailLogin'),
-                      variant: Variant.PRIMARY,
-                    }}
-                  />
-                </DivLine>
-              </a>
-            </>
-          )}
           <DivLine>
             <PlainText
               config={{
@@ -140,6 +117,47 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: 'log
               />
             </a>
           </DivLine>
+          {social.providers && social.providers.length > 0 && (
+            <PlainText
+              config={{
+                size: 16,
+                text: msgStr('or'),
+                variant: Variant.SECONDARY,
+              }}
+            />
+          )}
+          {social.providers &&
+            social.providers.map((provider) => {
+              // eslint-disable-next-line unicorn/consistent-function-scoping
+              const getIconByProviderId = (providerId: string) => {
+                switch (providerId) {
+                  case 'google': {
+                    return google
+                  }
+                  case 'yandex': {
+                    return yandex
+                  }
+                  default: {
+                    return ''
+                  }
+                }
+              }
+
+              return (
+                <a href={provider.loginUrl}>
+                  <DivLine style={{ gap: '15px' }}>
+                    <img alt={'GMail'} height={'30px'} src={getIconByProviderId(provider.providerId)} />
+                    <PlainText
+                      config={{
+                        size: 16,
+                        text: msgStr('loginWithSocial', provider.displayName),
+                        variant: Variant.PRIMARY,
+                      }}
+                    />
+                  </DivLine>
+                </a>
+              )
+            })}
         </ContentItem>
       </GridContainer>
     </>
