@@ -16,8 +16,8 @@ export const PageContainer = styled.div`
   margin: 0;
   padding-left: 40px;
   padding-right: 40px;
-  width: 100vw;
-  height: calc(100vh - 60px);
+  width: 100%;
+  height: calc(100% - 60px);
 `
 
 export const Img = styled.img`
@@ -39,8 +39,8 @@ export const ImgBack = styled.img<{
   position: absolute;
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
-  margin-left: ${(props) => props.left}px;
-  margin-top: ${(props) => props.top}px;
+  margin-left: ${(props) => props.left}%;
+  margin-top: ${(props) => props.top}%;
 `
 
 export const BackContainer = styled.div`
@@ -55,9 +55,9 @@ export const BackContainer = styled.div`
 export function NotFoundPage() {
   return (
     <PageContainer>
-      <ImgBack height={60} left={30} src={circle} top={168} width={60} />
-      <ImgBack height={134} left={1124} src={circle} top={88} width={134} />
-      <ImgBack height={207} left={1031} src={circle} top={537} width={207} />
+      <ImgBack height={60} left={5} src={circle} top={30} width={60} />
+      <ImgBack height={134} left={32} src={circle} top={2} width={134} />
+      <ImgBack height={207} left={50} src={circle} top={30} width={207} />
       <HeaderText
         config={{
           size: 600,
