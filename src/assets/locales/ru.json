@@ -1,0 +1,33 @@
+{
+  "translation": {
+    "backToMain": "На главную",
+    "doContinue": "Продолжить",
+    "doCreateAccount": "Создать аккаунт",
+    "doForgotPassword": "Забыли пароль?",
+    "doLogIn": "Войти",
+    "doRegister": "Зарегистрироваться",
+    "email": "Адрес электронной почты",
+    "emailPatternError": "Неверный формат.",
+    "errorTitle": "Мы сожалеем...",
+    "emailVerifyInstruction1": "Мы отправили подтверждение по адресу:",
+    "emailVerifyInstruction2": "Проверьте вашу почту и нажмите на ссылку, чтобы продолжить",
+    "emailVerifyTitle": "Подтвердите адрес электронной почты",
+    "firstCharacterUsernameError": "Должно начинаться с латинской буквы.",
+    "haveAccount": "Уже есть аккаунт?",
+    "loginTitle": "Вход",
+    "loginWithSocial": "Войти с помощью {1}",
+    "mismatchedPasswordConfirmError": "Подтверждение пароля не совпадает.",
+    "noAccount": "Ещё нет аккаунта?",
+    "or": "или",
+    "password": "Пароль",
+    "passwordConfirm": "Подтверждение пароля",
+    "passwordPatternError": "Обязательные символы: заглавная и строчная латинские буквы, цифра, специальный символ.",
+    "registerTitle": "Регистрация",
+    "resetPasswordText": "Введите имя пользователя или адрес электронный почты, связанный с аккаунтом, и мы отправим ссылку для восстановления пароля",
+    "tooLongLengthError": "Максимальная длина – {{max}}.",
+    "tooShortLengthError": "Минимальная длина — {{min}}.",
+    "username": "Имя пользователя",
+    "usernameOrEmail": "Имя пользователя или адрес электронной почты",
+    "usernamePatternError": "Разрешенные символы: заглавные и строчные латинские буквы, цифры, символы нижнего подчеркивания."
+  }
+}

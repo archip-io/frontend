@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import backSVG from '../assets/back-icon.svg'
-import circle from '../assets/circle.png'
-import { HeaderText, PlainText } from '../components/text/Text.tsx'
-import { Variant } from '../styles/ts/types.ts'
+import backSVG from '../../assets/back-icon.svg'
+import circle from '../../assets/circle.png'
+import { HeaderText, PlainText } from '../../components/text/Text.tsx'
+import { Variant } from '../../styles/ts/types.ts'
 
 export const PageContainer = styled.div`
   box-sizing: border-box;
