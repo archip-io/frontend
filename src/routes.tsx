@@ -2,9 +2,9 @@ import { Navigate } from 'react-router-dom'
 
 import { Role } from './model/UserContex.ts'
 import { getAllRoles } from './model/UserContextHelper.ts'
-import { NotFoundPage } from './pages/NotFoundPage.tsx'
-import { RegistrationSuccess } from './pages/RegistrationSuccess.tsx'
-import {NewPasswordSuccess} from "./pages/NewPasswordSuccess.tsx";
+import {NewPasswordSuccessPage} from "./pages/auth/NewPasswordSuccessPage.tsx";
+import { NotFoundPage } from './pages/common/NotFoundPage.tsx'
+import { RegistrationSuccessPage } from './pages/auth/RegistrationSuccessPage.tsx'
 
 export type RouteType = {
   accessRoles?: Role[]
@@ -31,12 +31,12 @@ export function getRoutes(): RouteType[] {
       path: '/not-found',
     },
     {
-      element: <RegistrationSuccess />,
+      element: <RegistrationSuccessPage />,
       isProtected: false,
       path: '/register-success',
     },
     {
-      element: <NewPasswordSuccess />,
+      element: <NewPasswordSuccessPage />,
       isProtected: false,
       path: '/new-password-success',
     },

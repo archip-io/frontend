@@ -64,7 +64,7 @@ export default function ErrorPage(props: ErrorPageProps) {
         <Button
           config={{
             onClick: action,
-            size: 16,
+            size: 22,
             text: t('backToMain'),
             variant: Variant.PRIMARY,
           }}

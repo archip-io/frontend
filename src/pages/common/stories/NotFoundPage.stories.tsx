@@ -5,7 +5,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
-  title: 'Pages/Common/NotFoundPage',
+  title: 'Pages/Common/NotFound',
 }
 
 const Template = () => <NotFoundPage />
