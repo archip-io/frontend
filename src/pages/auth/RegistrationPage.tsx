@@ -11,7 +11,7 @@ import { useEmailValidation, usePasswordConfirmValidation, usePasswordValidation
 import { manageElementJustifyContent } from '../../utils/ElementControl.ts'
 import { ContentItem, DivLine, GridContainer, Logo, LogoItem } from './slyles/Login.styled.ts'
 
-export default function RegisterPage() {
+export default function RegistrationPage() {
   const { t } = useTranslation()
   const { setUsername, username, usernameError, validateUsername } = useUsernameValidation()
   const { email, emailError, setEmail, validateEmail } = useEmailValidation()
@@ -42,7 +42,7 @@ export default function RegisterPage() {
               config={{
                 bold: true,
                 size: 44,
-                text: t('registerTitle'),
+                text: t('registrationTitle'),
                 variant: Variant.SECONDARY,
               }}
             />
