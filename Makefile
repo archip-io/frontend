@@ -17,10 +17,6 @@ dev:
 lint:
 	$(NPM) run lint
 
-.PHONY: build-keycloak-theme
-build-keycloak-theme:
-	$(NPM) run build-keycloak-theme
-
 .PHONY: storybook
 storybook:
 	$(NPM) run storybook
@@ -40,8 +36,6 @@ help:
 	@echo "        Start the local server for development"
 	@echo "    make lint"
 	@echo "         Automatically fix fixable problems in the code"
-	@echo "    make build-keycloak-theme"
-	@echo "        Generate the .jar to be imported in Keycloak"
 	@echo "    make storybook"
 	@echo "        Start the local server by displaying interactive documentation"
 	@echo "    make build-storybook"

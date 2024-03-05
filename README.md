@@ -1,15 +1,14 @@
 # Frontend
 
-Добро пожаловать в репозиторий Frontend! Frontend - пользовательские интерфейс в платформе Archipio.
-Проект объединяет в себе SPA и тему для Keycloak.
+Добро пожаловать в репозиторий Frontend! Frontend - пользовательский WEB интерфейс в платформе Archipio.
 
 ## Технологии
 
 - React
 - TypeScript
 - Vite
-- Keycloakify
 - Styled Components
+- i18n
 - ESLint
 - Storybook
 - Docker
@@ -23,7 +22,6 @@ make clean                  # Очистить созданные файлы
 make build                  # Сгенерировать статические файлы для развертывания приложения
 make dev                    # Запустить локальный сервер для разработки
 make lint                   # Автоматически исправить исправляемые проблемы в коде
-make build-keycloak-theme   # Сгенерировать .jar для импорта в Keycloak
 make storybook              # Запустить локальный сервер с отображанием интерактивной документации
 make build-storybook        # Сгенерировать статические файлы для развертывания Storybook
 ```

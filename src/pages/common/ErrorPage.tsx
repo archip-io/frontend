@@ -1,14 +1,10 @@
-import type { PageProps } from 'keycloakify/login/pages/PageProps'
-
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
-import type { I18n } from '../i18n'
-import type { KcContext } from '../kcContext'
-
-import { Button } from '../../../components/button/Button.tsx'
-import { HeaderText, PlainText } from '../../../components/text/Text.tsx'
-import { TextAlign } from '../../../components/text/Text.types.ts'
-import { Variant } from '../../../styles/ts/types.ts'
+import { Button } from '../../components/button/Button.tsx'
+import { HeaderText, PlainText } from '../../components/text/Text.tsx'
+import { TextAlign } from '../../components/text/Text.types.ts'
+import { Variant } from '../../styles/ts/types.ts'
 
 const Container = styled.div`
   display: flex;
@@ -36,12 +32,14 @@ const Content = styled.div`
   overflow: auto;
 `
 
-export default function Error(props: PageProps<Extract<KcContext, { pageId: 'error.ftl' }>, I18n>) {
-  const { i18n, kcContext } = props
+export interface ErrorPageProps {
+  action: any
+  message: string
+}
 
-  const { message, url } = kcContext
-
-  const { msgStr } = i18n
+export default function ErrorPage(props: ErrorPageProps) {
+  const { action, message } = props
+  const { t } = useTranslation()
 
   return (
     <Container>
@@ -51,7 +49,7 @@ export default function Error(props: PageProps<Extract<KcContext, { pageId: 'err
             align: TextAlign.CENTER,
             bold: true,
             size: 32,
-            text: msgStr('errorTitle'),
+            text: t('errorTitle'),
             variant: Variant.SECONDARY,
           }}
         />
@@ -59,17 +57,15 @@ export default function Error(props: PageProps<Extract<KcContext, { pageId: 'err
           config={{
             align: TextAlign.CENTER,
             size: 22,
-            text: message.summary,
+            text: message,
             variant: Variant.PRIMARY,
           }}
         />
         <Button
           config={{
-            onClick: () => {
-              window.location.href = url.loginUrl
-            },
+            onClick: action,
             size: 16,
-            text: msgStr('backToLogin'),
+            text: t('backToMain'),
             variant: Variant.PRIMARY,
           }}
         />
